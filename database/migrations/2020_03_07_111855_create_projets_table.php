@@ -19,7 +19,7 @@ class CreateProjetsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->string('intitule',255);
             $table->string('description',255);
-            $table->string('f_attachees',255);
+            $table->string('f_attachees',255)->nullable();
             $table->boolean('status');
             $table->timestamps();
         });

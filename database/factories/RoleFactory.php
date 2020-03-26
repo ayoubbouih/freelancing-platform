@@ -7,6 +7,6 @@ use Faker\Generator as Faker;
 
 $factory->define(role::class, function (Faker $faker) {
     return [
-        //
+        'intitule'=>'Admin'
     ];
 });

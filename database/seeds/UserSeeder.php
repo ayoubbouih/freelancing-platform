@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 
-class RoleSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -11,6 +11,6 @@ class RoleSeeder extends Seeder
      */
     public function run()
     {
-        factory('App\role', 1)->create();
+        factory('App\user',10)->create();
     }
 }
