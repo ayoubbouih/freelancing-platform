@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class poste extends Model
 {
+    public $timestamps = false;
+
     public function projet(){
         return $this->belongsTo('App\projet');
     }
@@ -13,6 +15,6 @@ class poste extends Model
         return $this->hasMany('App\demande');
     }
     protected $fillable = [
-        'intitule','id_projet','status','min','max'
+        'intitule','projet_id','status','min','max'
     ];
 }
