@@ -11,6 +11,6 @@ class CategorieSeeder extends Seeder
      */
     public function run()
     {
-        //
+        factory('App\categorie',1)->create();
     }
 }

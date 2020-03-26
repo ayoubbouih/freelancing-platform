@@ -7,6 +7,6 @@ use Faker\Generator as Faker;
 
 $factory->define(categorie::class, function (Faker $faker) {
     return [
-        //
+        'intitule'=>'devloppement'
     ];
 });

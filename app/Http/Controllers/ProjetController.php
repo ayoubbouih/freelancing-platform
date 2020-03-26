@@ -48,7 +48,7 @@ class ProjetController extends Controller
         // ]);
         $d=projet::create([
             "intitule"=>$request['projet_intitule'],
-            'user_id'=>1,
+            'user_id'=>1, //Auth::id(),
             'categorie_id'=>1,
             'description'=>"hellohjkjk",
             'status'=>0
