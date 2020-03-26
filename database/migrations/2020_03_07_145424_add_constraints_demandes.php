@@ -14,8 +14,8 @@ class AddConstraintsDemandes extends Migration
     public function up()
     {
         Schema::table('demandes', function (Blueprint $table) {
-            $table->foreign('id_user')->references('id')->on('users');
-            $table->foreign('id_poste')->references('id')->on('postes');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('poste_id')->references('id')->on('postes');
         });
     }
 
@@ -27,8 +27,8 @@ class AddConstraintsDemandes extends Migration
     public function down()
     {
         Schema::table('demandes', function (Blueprint $table) {
-            $table->dropForeign(['id_user']);
-            $table->dropForeign(['id_poste']);
+            $table->dropForeign(['user_id']);
+            $table->dropForeign(['poste_id']);
         });
     }
 }

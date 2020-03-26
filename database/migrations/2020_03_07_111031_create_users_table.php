@@ -17,13 +17,13 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('username',50);
             $table->string('email',50)->unique();
-            $table->string('tele',50);
+            $table->string('tel',50);
             $table->string('image',255)->nullable();
             $table->string('password');
             $table->string('description',255);
             $table->unsignedDecimal('solde',8,2);
             $table->string('paypal',50);
-            $table->unsignedBigInteger('id_role');
+            $table->unsignedBigInteger('role_id');
             $table->timestamps();
         });
     }

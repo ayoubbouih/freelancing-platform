@@ -15,7 +15,7 @@ class CreatePostesTable extends Migration
     {
         Schema::create('postes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_projet');
+            $table->unsignedBigInteger('projet_id');
             $table->unsignedSmallInteger('min');
             $table->unsignedSmallInteger('max');
             $table->string('intitule',255);

@@ -14,8 +14,8 @@ class AddConstraintsProjets extends Migration
     public function up()
     {
         Schema::table('projets', function (Blueprint $table) {
-            $table->foreign('id_categorie')->references('id')->on('categories');
-            $table->foreign('id_user')->references('id')->on('users');
+            $table->foreign('categorie_id')->references('id')->on('categories');
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
@@ -27,8 +27,8 @@ class AddConstraintsProjets extends Migration
     public function down()
     {
         Schema::table('projets', function (Blueprint $table) {
-            $table->dropForeign(['id_categorie']);
-            $table->dropForeign(['id_user']);
+            $table->dropForeign(['categorie_id']);
+            $table->dropForeign(['user_id']);
         });
     }
 }

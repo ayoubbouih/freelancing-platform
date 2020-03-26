@@ -15,7 +15,7 @@ class CreateAvisTable extends Migration
     {
         Schema::create('avis', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_recrutement');
+            $table->unsignedBigInteger('recrutement_id');
             $table->unsignedTinyInteger('note');
             $table->text('description');
             $table->timestamps();

@@ -14,7 +14,7 @@ class AddConstraintsAvis extends Migration
     public function up()
     {
         Schema::table('avis', function (Blueprint $table) {
-            $table->foreign('id_recrutement')->references('id')->on('recrutements');
+            $table->foreign('recrutement_id')->references('id')->on('recrutements');
         });
     }
 
@@ -26,7 +26,7 @@ class AddConstraintsAvis extends Migration
     public function down()
     {
         Schema::table('avis', function (Blueprint $table) {
-            $table->dropForeign(['id_recrutement']);
+            $table->dropForeign(['recrutement_id']);
         });
     }
 }

@@ -14,7 +14,7 @@ class AddConstraintsPostes extends Migration
     public function up()
     {
         Schema::table('postes', function (Blueprint $table) {
-            $table->foreign('id_projet')->references('id')->on('projets');
+            $table->foreign('projet_id')->references('id')->on('projets');
         });
     }
 
@@ -26,7 +26,7 @@ class AddConstraintsPostes extends Migration
     public function down()
     {
         Schema::table('postes', function (Blueprint $table) {
-            $table->dropForeign(['id_projet']);
+            $table->dropForeign(['projet_id']);
         });
     }
 }

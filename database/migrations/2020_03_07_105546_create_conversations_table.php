@@ -15,7 +15,7 @@ class CreateConversationsTable extends Migration
     {
         Schema::create('conversations', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_demande');
+            $table->unsignedBigInteger('demande_id');
             $table->timestamps();
         });
     }

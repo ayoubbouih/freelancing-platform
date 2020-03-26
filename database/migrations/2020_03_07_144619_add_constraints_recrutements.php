@@ -14,10 +14,10 @@ class AddConstraintsRecrutements extends Migration
     public function up()
     {
         Schema::table('recrutements', function (Blueprint $table) {
-            $table->foreign('id_demande')->references('id')->on('demandes');
-            $table->foreign('id_categorie')->references('id')->on('categories');
-            $table->foreign('id_projet')->references('id')->on('projets');
-            $table->foreign('id_poste')->references('id')->on('postes');
+            $table->foreign('demande_id')->references('id')->on('demandes');
+            $table->foreign('categorie_id')->references('id')->on('categories');
+            $table->foreign('projet_id')->references('id')->on('projets');
+            $table->foreign('poste_id')->references('id')->on('postes');
         });
     }
 
@@ -29,10 +29,10 @@ class AddConstraintsRecrutements extends Migration
     public function down()
     {
         Schema::table('recrutements', function (Blueprint $table) {
-            $table->dropForeign(['id_demande']);
-            $table->dropForeign(['id_categorie']);
-            $table->dropForeign(['id_projet']);
-            $table->dropForeign(['id_poste']);
+            $table->dropForeign(['demande_id']);
+            $table->dropForeign(['categorie_id']);
+            $table->dropForeign(['projet_id']);
+            $table->dropForeign(['poste_id']);
         });
     }
 }

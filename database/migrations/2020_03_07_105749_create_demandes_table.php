@@ -15,8 +15,8 @@ class CreateDemandesTable extends Migration
     {
         Schema::create('demandes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_user');
-            $table->unsignedBigInteger('id_poste');
+            $table->unsignedBigInteger('user_id');
+            $table->unsignedBigInteger('poste_id');
             $table->unsignedDecimal('prix',8,2);
             $table->string('description',255);
             $table->timestamps();

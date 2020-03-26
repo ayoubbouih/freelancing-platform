@@ -15,7 +15,7 @@ class CreatePaiementsTable extends Migration
     {
         Schema::create('paiements', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('id_user');
+            $table->unsignedBigInteger('user_id');
             $table->string('mode_paiement',50);
             $table->unsignedDecimal('amount');
             $table->timestamps();

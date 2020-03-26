@@ -14,7 +14,7 @@ class AddConstraintsConversations extends Migration
     public function up()
     {
         Schema::table('conversations', function (Blueprint $table) {
-            $table->foreign('id_demande')->references('id')->on('demandes');
+            $table->foreign('demande_id')->references('id')->on('demandes');
         });
     }
 
@@ -26,7 +26,7 @@ class AddConstraintsConversations extends Migration
     public function down()
     {
         Schema::table('conversations', function (Blueprint $table) {
-            $table->dropForeign(['id_demande']);
+            $table->dropForeign(['demande_id']);
         });
     }
 }

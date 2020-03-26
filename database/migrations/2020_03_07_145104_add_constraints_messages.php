@@ -14,9 +14,9 @@ class AddConstraintsMessages extends Migration
     public function up()
     {
         Schema::table('messages', function (Blueprint $table) {
-            $table->foreign('id_conversation')->references('id')->on('conversations');
-            $table->foreign('id_envoyeur')->references('id')->on('users');
-            $table->foreign('id_recepteur')->references('id')->on('users');
+            $table->foreign('conversation_id')->references('id')->on('conversations');
+            $table->foreign('envoyeur_id')->references('id')->on('users');
+            $table->foreign('recepteur_id')->references('id')->on('users');
         });
     }
 
@@ -28,9 +28,9 @@ class AddConstraintsMessages extends Migration
     public function down()
     {
         Schema::table('messages', function (Blueprint $table) {
-            $table->dropForeign(['id_conversation']);
-            $table->dropForeign(['id_envoyeur']);
-            $table->dropForeign(['id_recepteur']);
+            $table->dropForeign(['conversation_id']);
+            $table->dropForeign(['envoyeur_id']);
+            $table->dropForeign(['recepteur_id']);
         });
     }
 }
