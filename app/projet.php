@@ -17,6 +17,6 @@ class projet extends Model
     }
 
     protected $fillable = [
-        'intitule', 'description','id_user','id_categorie','status','f_attachees'
+        'intitule', 'description','user_id','categorie_id','status','f_attachees'
     ];
 }

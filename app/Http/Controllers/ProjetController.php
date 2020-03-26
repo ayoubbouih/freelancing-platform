@@ -48,13 +48,13 @@ class ProjetController extends Controller
         // ]);
         $d=projet::create([
             "intitule"=>$request['projet_intitule'],
-            'id_user'=>1,
-            'id_categorie'=>1,
+            'user_id'=>1,
+            'categorie_id'=>1,
             'description'=>"hellohjkjk",
             'status'=>0
         ]);
         poste::create([
-            'id_projet' => $d->id,
+            'projet_id' => $d->id,
             'intitule' =>$request['poste_intitule'],
             'min' => $request['poste_min'],
             'max' => $request['poste_max'],

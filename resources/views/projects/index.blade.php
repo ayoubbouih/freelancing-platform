@@ -6,6 +6,6 @@
             <h1>{{ $projet->id }}</h1>
         @endforeach
     @else
-        echo "there is no project for the moment<br>";
+        there is no project for the moment
     @endif
 @endsection
