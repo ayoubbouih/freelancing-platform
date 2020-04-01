@@ -1,4 +1,3 @@
-
 	<header id=header>
 		<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark justify-content-sm-start fixed-top">
 		  <div class="container">
@@ -12,18 +11,18 @@
 			</a>
 	
 			<div class="collapse navbar-collapse bg-dark p-3 p-lg-0 mt-5 mt-lg-0 d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end mobileMenu">
-			  <ul class="navbar-nav align-self-stretch">
+			  <ul class="navbar-nav align-self-stretch mr-0 mr-lg-2">
 				<li class="nav-item">
 					<a class="nav-link" href="#"><i class="fa fa-plus fa-xs"></i> Nouveau projet</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#"><i class="fa fa-object-group" aria-hidden="true"></i> Type de Projet</a>
+					<a class="nav-link" href="#"><i class="fa fa-object-group"></i> Type de Projet</a>
 				</li>
 			  </ul>
 			</div>
 	
 	
-			@if(Auth::check())
+			@if(!Auth::check())
 				<x-loginregisterpopup />
 			@else
 	
@@ -119,7 +118,7 @@
 				</div>
 		
 				<!-- Dropdown -->
-				<div class="header-notifications-dropdown" id=user>
+				<div class="header-notifications-dropdown d-none" id=user>
 
 					<ul class="list-group">
 						<li class="list-group-item">

@@ -24,5 +24,16 @@ $(document).ready(function() {
         $('#notifications, #messages, #user').addClass('d-none');
         $(t).toggleClass('d-none');
     }
+
+    /* Show and Hide Login & SignUp Popup */
+    $('.overlay2, .dismiss').on('click',function(e){
+        if($(".modal.fade").hasClass("showup")){
+            $(".modal.fade").removeClass("showup");
+            $(".overlay2").removeClass("open");
+            return
+        }
+        $(".modal.fade").addClass("showup");
+        $(".overlay2").addClass("open");
+    });
   });
   
