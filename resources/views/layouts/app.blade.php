@@ -7,13 +7,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="referrer" content="strict-origin" />
     <title>{{ config('app.name', 'Laravel') }}</title>
-	<link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
-    @yield('includes')
+	<link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
 </head>
 <body>
 	<x-navigation-bar /> {{-- navbar component --}}
-     @yield('sidebar')
+    @yield('sidebar')
     @yield('content')
     <x-footer /> {{-- footer component --}}
 

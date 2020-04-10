@@ -10893,6 +10893,10 @@ a {
   color: #000;
 }
 
+.container.content {
+  min-height: calc(100vh - 353px);
+}
+
 /* Header */
 
 @media (max-width: 992px) {
@@ -10993,10 +10997,6 @@ a {
 
 /* End Navbar */
 
-/* Login SignUp Popup */
-
-/* End Login SignUp Popup */
-
 /* Notification Content */
 
 .header-notifications-dropdown {
@@ -11030,7 +11030,7 @@ a {
 
 /* Notification Content */
 
-/* my CSS */
+/* Styles Index Page */
 
 @media (max-width: 768px) {
   .row img {
@@ -11048,6 +11048,51 @@ a {
     padding: 0 25px;
   }
 }
+
+.category-box {
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 25%;
+  margin: 0;
+  padding: 25px;
+  border-radius: 4px;
+  transition: 0.35s;
+  min-width: 33.3%;
+  max-width: 50%;
+}
+
+.category-box:hover {
+  background: #666;
+  box-shadow: 0 4px 12px rgba(102, 103, 107, 0.2);
+  color: #fff;
+}
+
+@media (max-width: 1240px) {
+  .category-box {
+    flex: 0 0 33.3%;
+  }
+}
+
+@media (max-width: 768px) {
+  .category-box {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .category-box {
+    flex: 0 0 100%;
+  }
+}
+
+.category-box-content h3 {
+  font-size: 1.4em;
+}
+
+/* End Styles Index Page */
 
 /* Just Pour Les Messages */
 

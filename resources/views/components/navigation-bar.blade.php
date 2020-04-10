@@ -1,13 +1,12 @@
-	<header id=header>
+	<header id=header class="mb-5 pb-4">
 		<nav class="navbar navbar-icon-top navbar-expand-lg navbar-dark bg-dark justify-content-sm-start fixed-top">
 		  <div class="container">
 	
 			<button class="navbar-toggler ml-2" type="button">
 			  <span class="navbar-toggler-icon"></span>
 			</button>		
-			<a class="navbar-brand ml-lg-0 ml-2 mr-auto" href="#">
-				{{-- <img id=logo src="images/male-avatar.png" width="30" height="30" class="d-inline-block" alt=""> --}}
-				<b>Khidma</b>
+			<a class="navbar-brand ml-lg-0 ml-2 mr-auto" href="{{ route('index') }}">
+				<img id=logo src="{{ asset('images/logo.png') }}" height=45 class="d-inline-block" alt="">
 			</a>
 	
 			<div class="collapse navbar-collapse bg-dark p-3 p-lg-0 mt-5 mt-lg-0 d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end mobileMenu">
@@ -22,8 +21,15 @@
 			</div>
 	
 	
-			@if(!Auth::check())
-				<x-loginregisterpopup />
+			@if(Auth::check())
+			<ul class="navbar-nav d-flex flex-row">
+				<li class="nav-item">
+					<a href="{{ route('auth.login') }}" class="nav-link"><i class="fa fa-user-plus"></i> S'enregister</a>
+				</li>
+				<li class="nav-item">
+					<a href="{{ route('auth.register') }}" class="nav-link"><i class="fa fa-sign-in"></i> S'indentifier</a>
+				</li>
+			</ul>
 			@else
 	
 			<!--  User Notifications -->

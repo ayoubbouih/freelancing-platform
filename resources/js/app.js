@@ -25,15 +25,17 @@ $(document).ready(function() {
         $(t).toggleClass('d-none');
     }
 
-    /* Show and Hide Login & SignUp Popup */
-    $('.overlay2, .dismiss').on('click',function(e){
-        if($(".modal.fade").hasClass("showup")){
-            $(".modal.fade").removeClass("showup");
-            $(".overlay2").removeClass("open");
-            return
-        }
-        $(".modal.fade").addClass("showup");
-        $(".overlay2").addClass("open");
+    /* Counter In Index Page */
+    $('.counter').each(function () {
+      $(this).prop('Counter',0).animate({
+          Counter: $(this).text()
+      }, {
+          duration: 2200,
+          easing: 'swing',
+          step: function (now) {
+              $(this).text(Math.ceil(now));
+          }
+      });
     });
-  });
+});
   
