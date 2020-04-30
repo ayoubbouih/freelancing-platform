@@ -13,14 +13,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::view('/','index')->name('index');
-Route::resource('/projets','projetController');
+Route::get('/', function () {
+    return view('index');
+})->name('index');
 
-/* user links */
-// Route::group(['middleware'=>'guest'], function(){
-//     Route::view('/login','auth.login')->name('auth.login');
-//     Route::view('/register','auth.register')->name('auth.register');
-// });
+Route::resource('/projets','projetController');
+Route::resource('/categorie','categorieController');
+Route::resource('/user','userController');
+Route::get('/checkout',function () {
+    return view('checkout');
+});
+Route::get('/t/{id}',"TController@index");
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Auth::routes();
