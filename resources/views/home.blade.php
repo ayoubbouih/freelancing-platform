@@ -1,16 +1,7 @@
 @extends('layouts.app')
-@section('includes')
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
-<link rel="stylesheet" href="{{ asset('css/blue.css') }}">
-<link rel="stylesheet" href="{{ asset('css/bootstrap-grid.css') }}">
 
-
-@endsection
-@section('header')
-
-@endsection
 @section('content')
-<div class="container">
+<div class="container content">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -29,8 +20,4 @@
         </div>
     </div>
 </div>
-@endsection
-@section('footer-includes')
-<script src="{{asset('js/jquery.js')}}"></script>
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
 @endsection

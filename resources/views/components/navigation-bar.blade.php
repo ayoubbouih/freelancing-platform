@@ -21,13 +21,13 @@
 			</div>
 	
 	
-			@if(Auth::check())
+			@guest
 			<ul class="navbar-nav d-flex flex-row">
 				<li class="nav-item">
-					<a href="{{ route('auth.login') }}" class="nav-link"><i class="fa fa-user-plus"></i> S'enregister</a>
+					<a href="{{ route('register') }}" class="nav-link"><i class="fa fa-user-plus px-3 px-sm-0"></i> <span class="d-none d-sm-inline">S'enregister</span></a>
 				</li>
 				<li class="nav-item">
-					<a href="{{ route('auth.register') }}" class="nav-link"><i class="fa fa-sign-in"></i> S'indentifier</a>
+					<a href="{{ route('login') }}" class="nav-link"><i class="fa fa-sign-in px-3 px-sm-0"></i> <span class="d-none d-sm-inline">S'indentifier</span></a>
 				</li>
 			</ul>
 			@else
@@ -137,8 +137,8 @@
 										<div class="online_icon rounded-circle" style="bottom:5px"></div>
 									</div>
 									<div class="ml-2">
-										<b>Tom Smith</b>
-										<span class="text-muted">Level 1</span>
+										<b>{{ Auth::user()->username }}</b>
+										<span class="text-muted">{{ Auth::user()->fullname }}</span>
 									</div>
 								</div>
 							</div>
@@ -152,7 +152,14 @@
 									<a href="#" class="nav-link">Settings</a>
 								</li>
 								<li class="nav-item border-top">
-									<a href="#" class="nav-link">Logout</a>
+									<a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault();
+										document.getElementById('logout-form').submit();">
+										{{ __('Logout') }}
+									</a>
+
+									<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+										@csrf
+									</form>
 								</li>
 							</ul>
 						</li>
@@ -160,8 +167,8 @@
 		
 				</div>
 		
-		@endif
+		@endguest
 	</div>
 </nav>
-<div class="overlay"></div>
+<div class="overlay d-lg-none"></div>
 </header>

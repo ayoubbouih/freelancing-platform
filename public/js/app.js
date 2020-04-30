@@ -110,6 +110,7 @@ $(document).ready(function () {
 
   var fixHeight = function fixHeight() {
     $('.navbar-nav').css('max-height', document.documentElement.clientHeight - 100);
+    $('#notifications, #messages, #user').addClass('d-none');
   };
 
   fixHeight();
@@ -136,6 +137,7 @@ $(document).ready(function () {
 
   function HideOrShow(e, t) {
     e.preventDefault();
+    $('.mobileMenu, .overlay').removeClass('open');
 
     if (!$(t).hasClass('d-none')) {
       $(t).addClass('d-none');

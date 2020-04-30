@@ -1,6 +1,6 @@
 <div id="footer">
     
-    <div class="container mt-2 ml-2 ml-sm-auto">
+    <div class="container py-2">
         <div class="row py-4">
             <div class="col-6 col-md-3 border-left border-primary">
                 <div class="footer-links">

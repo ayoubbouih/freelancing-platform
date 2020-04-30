@@ -17,7 +17,10 @@ Route::view('/','index')->name('index');
 Route::resource('/projets','projetController');
 
 /* user links */
-Route::group(['middleware'=>'guest'], function(){
-    Route::view('/login','auth.login')->name('auth.login');
-    Route::view('/register','auth.register')->name('auth.register');
-});
+// Route::group(['middleware'=>'guest'], function(){
+//     Route::view('/login','auth.login')->name('auth.login');
+//     Route::view('/register','auth.register')->name('auth.register');
+// });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

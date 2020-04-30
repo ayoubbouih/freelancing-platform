@@ -16,6 +16,8 @@ class CreateRecrutementsTable extends Migration
         Schema::create('recrutements', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('demande_id');
+            $table->unsignedBigInteger('categorie_id');
+            $table->unsignedBigInteger('projet_id');
             $table->unsignedBigInteger('poste_id');
             $table->string('status',25)->default('en cours');
             $table->timestamps();

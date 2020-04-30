@@ -10921,20 +10921,20 @@ a {
   }
 }
 
-.overlay,
-.overlay2 {
+.overlay {
   position: fixed;
-  top: 0;
+  top: 58px;
   bottom: 0;
-  left: 0;
   right: 0;
+  width: 60%;
+  max-width: calc( 100% - 150px);
   margin: auto;
+  transition: all ease 0.25s;
   background-color: rgba(0, 0, 0, 0.5);
   display: none;
 }
 
-.overlay.open,
-.overlay2.open {
+.overlay.open {
   display: block;
   z-index: 1050;
 }

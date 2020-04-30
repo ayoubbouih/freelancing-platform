@@ -9,8 +9,12 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 	<link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
+
+    <!-- Fonts -->
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 </head>
-<body>
+<body id="app">
 	<x-navigation-bar /> {{-- navbar component --}}
     @yield('sidebar')
     @yield('content')
@@ -19,4 +23,6 @@
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
+    @yield('script') {{-- For Pages That Need AJAX Or Additional Scripts --}}
 </body>
+</html>

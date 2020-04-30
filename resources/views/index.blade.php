@@ -2,7 +2,6 @@
 
 @section('content')
 <div class="container content">
-    
     <!-- Intro Headline -->
     <div class="row">
         <div class="col-md-5 text-center mt-md-4 mt-lg-0">

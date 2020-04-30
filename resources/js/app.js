@@ -1,41 +1,32 @@
-$(document).ready(function() {
-    'use strict';
-    /* Sidebar On Mobile */
-    var fixHeight = function() {
-      $('.navbar-nav').css('max-height',document.documentElement.clientHeight-100);
-    };
-    fixHeight();
-    $(window).resize(function() {fixHeight();});
-    $('.navbar .navbar-toggler').on('click', function() {fixHeight();});
-    $('.navbar-toggler, .overlay').on('click', function() {
-      $('.mobileMenu, .overlay').toggleClass('open');
-    });
+/**
+ * First we will load all of this project's JavaScript dependencies which
+ * includes Vue and other libraries. It is a great starting point when
+ * building robust, powerful web applications using Vue and Laravel.
+ */
 
-    /* Show And Hide Notification,Messages,User Content */
-    $('.nav-link.notifications').click(function(e){HideOrShow(e,"#notifications")});
-    $('.nav-link.messages').click(function(e){HideOrShow(e,"#messages")});
-    $('.nav-link.user').click(function(e){HideOrShow(e,"#user")});
-    function HideOrShow(e,t){
-        e.preventDefault();
-        if(!$(t).hasClass('d-none')){
-            $(t).addClass('d-none');
-            return
-        }
-        $('#notifications, #messages, #user').addClass('d-none');
-        $(t).toggleClass('d-none');
-    }
+require('./bootstrap');
 
-    /* Counter In Index Page */
-    $('.counter').each(function () {
-      $(this).prop('Counter',0).animate({
-          Counter: $(this).text()
-      }, {
-          duration: 2200,
-          easing: 'swing',
-          step: function (now) {
-              $(this).text(Math.ceil(now));
-          }
-      });
-    });
+window.Vue = require('vue');
+
+/**
+ * The following block of code may be used to automatically register your
+ * Vue components. It will recursively scan this directory for the Vue
+ * components and automatically register them with their "basename".
+ *
+ * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
+ */
+
+// const files = require.context('./', true, /\.vue$/i)
+// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+
+/**
+ * Next, we will create a fresh Vue application instance and attach it to
+ * the page. Then, you may begin adding components to this application
+ * or customize the JavaScript scaffolding to fit your unique needs.
+ */
+
+const app = new Vue({
+    el: '#app',
 });
-  
