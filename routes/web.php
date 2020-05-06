@@ -13,16 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
-
+Route::get('/', 'indexController@index')->name('index');
 Route::resource('/projets','projetController');
 Route::resource('/categorie','categorieController');
 Route::resource('/user','userController');
-Route::get('/checkout',function () {
-    return view('checkout');
-});
+Route::resource('/paiement','PaiementController')->middleware('auth');
 Route::get('/t/{id}',"TController@index");
 Auth::routes();
 
