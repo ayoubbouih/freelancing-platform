@@ -26,6 +26,7 @@ class CreateUsersTable extends Migration
             $table->unsignedDecimal('solde',8,2)->default(0);
             $table->string('paypal',60);
             $table->unsignedBigInteger('role_id');
+            $table->string('pays',30)->default("maroc");;
             $table->string('last_activity',11)->default(0);
             $table->timestamps();
         });
