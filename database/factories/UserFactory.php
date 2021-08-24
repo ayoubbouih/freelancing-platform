@@ -23,7 +23,7 @@ $factory->define(user::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail,
         'fullname'=>$faker->name,
         'tel' => $faker->tollFreePhoneNumber,
-        'image'=>'link to image here',
+        'image'=>'default_user.png',
         'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
         'description' => $faker->sentence(20),
         'solde'=>$faker->biasedNumberBetween($min=10, $max=20,$fct='sqrt'),
