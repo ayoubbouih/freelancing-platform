@@ -10,9 +10,10 @@ class recrutement extends Model
         return $this->hasOne('App\avi');
     }
     public function poste(){
-        return hasOne('App\poste');
+        return $this->belongsTo('App\poste');
     }
     public function demande(){
-        return hasOne('App\demande');
+        return $this->belongsTo('App\demande'); //hasOne
     }
+    protected $fillable = ['poste_id','demande_id'];
 }

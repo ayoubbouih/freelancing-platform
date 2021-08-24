@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class avi extends Model
 {
     public function recrutement(){
-        return $this->hasOne('App\recrutement');
+        return $this->belongsTo('App\recrutement');
     }
+    protected $fillable =['recrutement_id','note','description'];
 }

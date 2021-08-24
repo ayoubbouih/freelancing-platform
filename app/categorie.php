@@ -8,7 +8,7 @@ class categorie extends Model
 {
     public $timestamps = false;
     
-    public function projects(){
+    public function projets(){
         return $this->hasMany('App\projet');
     }
 }

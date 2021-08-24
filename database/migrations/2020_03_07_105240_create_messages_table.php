@@ -18,6 +18,7 @@ class CreateMessagesTable extends Migration
             $table->unsignedBigInteger('conversation_id');
             $table->unsignedBigInteger('envoyeur_id');
             $table->unsignedBigInteger('recepteur_id');
+            $table->boolean('Vu')->default(false);
             $table->string('type_message',10);
             $table->string('contenu',255);
             $table->timestamps();

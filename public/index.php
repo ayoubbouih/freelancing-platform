@@ -36,6 +36,12 @@ require __DIR__.'/../vendor/autoload.php';
 
 $app = require_once __DIR__.'/../bootstrap/app.php';
 
+/*Added By Abdessalam, to fix images upload issues on server, you should delete it while using localhost*/
+$app->bind('path.public', function() {
+    return __DIR__;
+});
+/* Added By Abdessalam*/
+
 /*
 |--------------------------------------------------------------------------
 | Run The Application

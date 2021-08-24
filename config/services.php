@@ -29,5 +29,9 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
+    'google' => [
+        'client_id' => '53449732672-1id8kmjg30e69u2rbm982t3imuqdgpmp.apps.googleusercontent.com', // your client_id form google console
+        'client_secret' => '8sGnH-7qIXCTRWmo-ia-GZPI', // your client_secret form google console
+        'redirect' => 'https://beemployer.com/auth/google/callback'],
 
 ];

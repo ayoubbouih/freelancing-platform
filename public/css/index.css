@@ -1,0 +1,45 @@
+header#header {
+    position: absolute;
+    top: 0px;
+    height: 58px;
+    width: 100%;
+    margin: 0px !important;
+}
+.navbar{
+    background:transparent ! important;
+}
+body{
+    overflow-x:hidden;
+}
+
+#one{
+    background: url(/images/lines.png), linear-gradient(135deg, #4b88bdb5, #3258a5);
+    background-size: contain;
+    position:relative;
+    top:0px;
+    width:100%;
+    padding-top:58px;
+    color:white;
+}
+.categorie-image img {
+    width: 100%;
+}
+.embaucher{
+    font-weight:bold;
+    line-height:60px;
+}
+.commencer{
+    line-height:60px;
+}
+.categorie {
+    background: white;
+    box-shadow: 0px 0px 5px 0px grey;
+}
+h2.embaucher {
+    color: white;
+}
+@media (min-width: 992px){
+    #navbar-home{
+        background:transparent ! important;
+    }
+}

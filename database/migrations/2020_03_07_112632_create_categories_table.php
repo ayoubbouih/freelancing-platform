@@ -15,7 +15,10 @@ class CreateCategoriesTable extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('intitule',255);
+            $table->string('intitule',60);
+            $table->string('logo', 30);
+            $table->string('description', 255);
+            $table->string('lienDeCategorie',100);
         });
     }
 
