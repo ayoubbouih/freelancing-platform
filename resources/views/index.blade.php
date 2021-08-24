@@ -109,7 +109,8 @@
                         <div class="col-md-6 col-lg-4 categories">
                             <div class="card mb-2">
                                 <a href="{{'/categorie/'.$categorie->lienDeCategorie}}" class="text-dark">
-                                    <img class="card-img-top mw-100" src="{{asset('/images/').'/'.$categorie->logo}}" alt="Card image cap">
+                                    <i class="card-img-top mw-100 fa {{$categorie->logo}}" alt="Card image cap"
+                                        style="font-size: 3rem;"></i>
                                     <div class="card-body">
                                       <h4 class="card-title">{{$categorie->intitule}}</h4>
                                       <p class="card-text">{{substr($categorie->description,0,50)}}</p>
