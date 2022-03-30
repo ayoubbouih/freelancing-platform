@@ -9,21 +9,21 @@
 
 ## Installation process
 
-- run git CLI and execute `cd /c/xampp/htdocs`
-- then execute`git clone <repo_link> project`
-- then change directory to the repo `cd project`
-- execute `composer install`
-- execute `cp .env.example .env`
-- execute `php artisan key:generate`
-- configure the following fields in `.env` file:
-`DB_DATABASE=database_name`
-`DB_USERNAME=root //user`
-`DB_PASSWORD=     //pass`
-`And Other Required Field`
+-   run git CLI and execute `cd /c/xampp/htdocs`
+-   then execute`git clone <repo_link> project`
+-   then change directory to the repo `cd project`
+-   execute `composer install` or `composer update`
+-   execute `cp .env.example .env`
+-   execute `php artisan key:generate`
+-   configure the following fields in `.env` file:
+    `DB_DATABASE=database_name`
+    `DB_USERNAME=root //user`
+    `DB_PASSWORD= //pass`
+    `And Other Required Field`
 
-- execute `php artisan migrate --seed` to create and configure database and its schema.
-- run project `php artisan serve`
-- consult the project in browser at __http://127.0.0.1:8000__
+-   execute `php artisan migrate --seed` to create and configure database and its schema.
+-   run project `php artisan serve`
+-   consult the project in browser at **http://127.0.0.1:8000**
 
 ## License
 
